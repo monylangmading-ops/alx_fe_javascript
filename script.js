@@ -4,13 +4,15 @@ const quotes = [
   { text: "Success is not final, failure is not fatal", category: "Motivation" }
 ];
 
+
 function displayRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const quoteDisplay = document.getElementById("quoteDisplay");
   quoteDisplay.innerHTML = `"${quotes[randomIndex].text}" — ${quotes[randomIndex].category}`;
-}
+};
 
 document.getElementById("newQuote").addEventListener("click", displayRandomQuote);
+
 
 function addQuote() {
   const quoteText = document.getElementById("newQuoteText").value.trim();
@@ -27,5 +29,5 @@ function addQuote() {
   } else {
     alert("Please enter both quote and category!");
   }
-}
+};
 
