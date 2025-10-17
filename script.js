@@ -5,13 +5,13 @@ let quotes =[
     { text: "Life always happens and problems never stop coming" , category:"Life"}
 ];
 
-function showRandomQuote() {
+function displayRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const quoteDisplay = document.getElementById("quoteDisplay");
-  quoteDisplay.textContent = `"${quotes[randomIndex].text}" - ${quotes[randomIndex].category}`;
+  quoteDisplay.textContent = `"${quotes[randomIndex].innerHTML}" - ${quotes[randomIndex].category}`;
 }
 
-document.getElementById("newQuote").addEventListener("click", showRandomQuote);
+document.getElementById("newQuote").addEventListener("click", displayRandomQuote);
 
 function addQuote() {
   const quoteText = document.getElementById("newQuoteText").value;
