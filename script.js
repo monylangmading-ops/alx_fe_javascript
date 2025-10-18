@@ -30,7 +30,6 @@ function addQuote() {
     alert("Please enter both quote and category!");
   }
 };
-localStorage.setItem('quotes' , 'text');
 
 function saveQuotes(){
   localStorage.setItem('quotes' , JSON.stringify('quotes'));
