@@ -30,4 +30,19 @@ function addQuote() {
     alert("Please enter both quote and category!");
   }
 };
+localStorage.setItem('quotes' , 'text');
 
+function saveQuotes(){
+  localStorage.setItem('quotes' , JSON.stringify('quotes'));
+}
+function loadQuotes(){
+   const storedQuotes = localStorage.getItem("quotes");
+   if(storedQuotes){
+    const parsedQuotes = JSON.parse("quotes");
+    quotes.push(...parsedQuotes);
+   }
+}
+function addQuote(text , category){
+quotes.push({text, category});
+saveQuotes();
+}
