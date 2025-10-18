@@ -1,13 +1,35 @@
-h1{
-    text-align: center;
-    justify-content: center;
-
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 20px;
 }
-#newQuote{
-    align-items: center;
-    justify-content: center;
-   box-sizing:border-box ;
-    box-shadow: 0 2px 8px ;
-    margin-left: 450px;
 
+#quoteDisplay {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px solid #ff6565;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add-quote-form input {
+  margin: 5px;
+  padding: 8px;
+  width: 200px;
+}
+
+.add-quote-form button {
+  padding: 8px 15px;
+  background-color: #ff6565;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-quote-form button:hover {
+  background-color: #ff4a57;
 }
