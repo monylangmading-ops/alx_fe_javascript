@@ -5,10 +5,10 @@ const quotes = [
 ];
 
 function displayRandomQuote() {
-  const quoteDisplay = document.getElementById('quoteDisplay').innerHTML;
+  const quoteDisplay = document.getElementById('quoteDisplay');
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomIndex];
-  quoteDisplay.innerHTML = "${randomQuote.text} — ${randomQuote.category}";
+  quoteDisplay.innerHTML = randomQuote.text + " — " + randomQuote.category;
 }
 
 function addQuote() {
@@ -21,6 +21,8 @@ function addQuote() {
   }
 
   quotes.push({ text: quoteInput, category: categoryInput });
+  document.getElementById('newQuoteText').innerHTML = "";
+  document.getElementById('newQuoteCategory').innerHTML = "";
   alert("Quote added successfully!");
 }
 
