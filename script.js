@@ -12,19 +12,18 @@ function addQuote() {
     alert("Please enter both a quote and a category!");
     return;
   }
+
+  quotes.push({ text: quoteInput, category: categoryInput });
+  document.getElementById('newQuoteText').value = "";
+  document.getElementById('newQuoteCategory').value = "";
+  alert("Quote added successfully!");
+}
   function displayRandomQuote() {
   const quoteDisplay = document.getElementById('quoteDisplay');
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomIndex];
   quoteDisplay.innerText = `"${randomQuote.text}" — ${randomQuote.category}`;
 
-}
-
-
-  quotes.push({ text: quoteInput, category: categoryInput });
-  document.getElementById('newQuoteText').value = "";
-  document.getElementById('newQuoteCategory').value = "";
-  alert("Quote added successfully!");
 }
 
 document.getElementById('newQuote').addEventListener('click', displayRandomQuote);
