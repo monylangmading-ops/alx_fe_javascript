@@ -4,7 +4,7 @@ const quotes = [
   { text: "Education is the key to life", category: "School" }
 ];
 
-function displayRandomQuote() {
+function showRandomQuote() {
   const quoteDisplay = document.getElementById('quoteDisplay');
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomIndex];
@@ -24,5 +24,5 @@ function addQuote() {
   alert("Quote added successfully!");
 }
 
-document.getElementById('newQuote').addEventListener('click', displayRandomQuote);
+document.getElementById('newQuote').addEventListener('click', showRandomQuote);
 document.getElementById('addQuoteBtn').addEventListener('click', addQuote);
