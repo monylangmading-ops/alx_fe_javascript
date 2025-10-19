@@ -14,7 +14,7 @@ const importFileInput = document.getElementById("importFile");
 const importBtn = document.getElementById("importBtn");
 
 function saveQuotes() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(quotes));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify('quotes'));
 }
 
 function loadQuotes() {
