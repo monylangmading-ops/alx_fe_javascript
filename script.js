@@ -27,4 +27,4 @@ function addQuote() {
 }
 
 document.getElementById('newQuote').addEventListener('click', displayRandomQuote);
-document.getElementById('addQuoteBtn').addEventListener('click', addQuote);
+document.getElementById('addQuoteBtn').addEventListener('click', addQuote)
