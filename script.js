@@ -4,14 +4,6 @@ const quotes = [
   { text: "Education is the key to life", category: "School" }
 ];
 
-function displayRandomQuote() {
-  const quoteDisplay = document.getElementById('quoteDisplay');
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  const randomQuote = quotes[randomIndex];
-  quoteDisplay.innerText = `"${randomQuote.text}" — ${randomQuote.category}`;
-
-}
-
 function addQuote() {
   const quoteInput = document.getElementById('newQuoteText').value.trim();
   const categoryInput = document.getElementById('newQuoteCategory').value.trim();
@@ -20,6 +12,14 @@ function addQuote() {
     alert("Please enter both a quote and a category!");
     return;
   }
+  function displayRandomQuote() {
+  const quoteDisplay = document.getElementById('quoteDisplay');
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const randomQuote = quotes[randomIndex];
+  quoteDisplay.innerText = `"${randomQuote.text}" — ${randomQuote.category}`;
+
+}
+
 
   quotes.push({ text: quoteInput, category: categoryInput });
   document.getElementById('newQuoteText').value = "";
