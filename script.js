@@ -1,14 +1,16 @@
-const quotes = [
+const quotes = [ 
   { text: "Life is full of ups and downs", category: "Motivation" },
   { text: "Always try your best to show up", category: "Inspiration" },
   { text: "Education is the key to life", category: "School" }
 ];
 
-function displayRandomQuote() {
+function displayRandomQuote() { 
   const quoteDisplay = document.getElementById('quoteDisplay');
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomIndex];
-  quoteDisplay.innerHTML = randomQuote.text + " — " + randomQuote.category;
+  
+
+  quoteDisplay.innerHTML = `"${randomQuote.text}" — ${randomQuote.category}`;
 }
 
 function addQuote() {
@@ -21,6 +23,7 @@ function addQuote() {
   }
 
   quotes.push({ text: quoteInput, category: categoryInput });
+  localStorage.setItem("quotes", JSON.stringify(quotes)); // for persistence
   document.getElementById('newQuoteText').value = "";
   document.getElementById('newQuoteCategory').value = "";
   alert("Quote added successfully!");
