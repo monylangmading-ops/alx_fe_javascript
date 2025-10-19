@@ -23,7 +23,6 @@ function addQuote() {
   }
 
   quotes.push({ text: quoteInput, category: categoryInput });
-  localStorage.setItem("quotes", JSON.stringify(quotes)); // for persistence
   document.getElementById('newQuoteText').value = "";
   document.getElementById('newQuoteCategory').value = "";
   alert("Quote added successfully!");
